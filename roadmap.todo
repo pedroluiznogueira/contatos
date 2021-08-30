@@ -1,35 +1,35 @@
 Aparência geral:
-    ☐ Crie uma pasta "img" dentro da pasta /src/assets/
+    ✔ Crie uma pasta "img" dentro da pasta /src/assets/ @done(21-08-30 10:53)
     A pasta assets é uma pasta de arquivos estáticos. Muito apropriada para armazenamento de imagens
     utilizadas no layout das páginas
-    ☐ Salve na pasta /src/assets/img a imagem https://github.com/sergiomoura/contatos-html-template/blob/main/img/bg.jpg
-    ☐ Aplicar geral.css para folha de estilos que será usada no site inteiro. 
+    ✔ Salve na pasta /src/assets/img a imagem https://github.com/sergiomoura/contatos-html-template/blob/main/img/bg.jpg @done(21-08-30 10:53)
+    ✔ Aplicar geral.css para folha de estilos que será usada no site inteiro. @done(21-08-30 10:53)
     . Visite
     . https://sergiomoura.github.io/contatos-html-template/home.html
     . https://github.com/sergiomoura/contatos-html-template
-    ☐ Limpe app.component.html
-    ☐ Visite localhost:4200 e verifique se o background já está visível
-    ☐ Incorpore os css externos no index.html
+    ✔ Limpe app.component.html @done(21-08-30 10:53)
+    ✔ Visite localhost:4200 e verifique se o background já está visível @done(21-08-30 10:53)
+    ✔ Incorpore os css externos no index.html @done(21-08-30 10:53)
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
 
 Criação de Menu:
-    ☐ Criar componentnte components/Menu
+    ✔ Criar componentnte components/Menu @done(21-08-30 10:54)
     O conteúdo de menu.component.html dele deve ser o do elemento nav contida em https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
-    ☐ Adicione esse componente ao app.component.html
-    ☐ Dê estilo a ele baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
+    ✔ Adicione esse componente ao app.component.html @done(21-08-30 10:54)
+    ✔ Dê estilo a ele baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css @done(21-08-30 10:54)
     - *Observe que o link para sair do sistema não está aparecendo corretamente (exit_to_app)*
-    ☐ Importe as fontes do material icon fonts para o seu projeto adicionando a linha de código no index.html
+    ✔ Importe as fontes do material icon fonts para o seu projeto adicionando a linha de código no index.html @done(21-08-30 10:54)
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    ☐ Verifique se o menu aparece corretamente.
+    ✔ Verifique se o menu aparece corretamente. @done(21-08-30 10:54)
 
 Criação de Lista de Contatos:
-    ☐ Criar o componente components/ListaDeContatos
+    ✔ Criar o componente components/ListaDeContatos @done(21-08-30 10:54)
     O conteúdo de lista-de-contatos.component.html deve ser o main de https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
-    ☐ Adicione esse componente ao app.component.html
-    ☐ Dê o estilo desse componente baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
-    ☐ Verifique se a lista de contatos aparece corretamente.
+    ✔ Adicione esse componente ao app.component.html @done(21-08-30 10:59)
+    ✔ Dê o estilo desse componente baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css @done(21-08-30 11:04)
+    ✔ Verifique se a lista de contatos aparece corretamente. @done(21-08-30 11:04)
 
 Criação de Componente contato:
     ☐ Criar componente components/Contato
