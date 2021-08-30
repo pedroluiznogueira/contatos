@@ -4,9 +4,9 @@ Aparência geral:
     utilizadas no layout das páginas
     ☐ Salve na pasta /src/assets/img a imagem https://github.com/sergiomoura/contatos-html-template/blob/main/img/bg.jpg
     ☐ Aplicar geral.css para folha de estilos que será usada no site inteiro. 
-    - Visite:
-    - https://sergiomoura.github.io/contatos-html-template/home.html
-    - https://github.com/sergiomoura/contatos-html-template
+    . Visite
+    . https://sergiomoura.github.io/contatos-html-template/home.html
+    . https://github.com/sergiomoura/contatos-html-template
     ☐ Limpe app.component.html
     ☐ Visite localhost:4200 e verifique se o background já está visível
     ☐ Incorpore os css externos no index.html
