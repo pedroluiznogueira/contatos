@@ -59,13 +59,28 @@ const BASE_DE_CONTATOS: Contato[] = [
 })
 export class ContatoService {
 
-  constructor() { }
+  private baseDeContatos: Contato[];
+  private chave: string = "CONTATOS";
+
+  constructor() {
+    // guardando novos contatos no local storage
+    let dados = window.localStorage.getItem(this.chave);
+    if (dados) {
+      // transforma uma string JSON em um array
+      this.baseDeContatos = JSON.parse(dados);
+    } else {
+      window.localStorage.setItem(this.chave, "[]");
+      this.baseDeContatos = [];
+    }
+   }
 
   getContatos(): Contato[] {
-    return BASE_DE_CONTATOS;
+    return this.baseDeContatos;
   }
 
   addContato(c: Contato):void {
-    BASE_DE_CONTATOS.push(c);
+    this.baseDeContatos.push(c);
+    // transforma um array baseDeContatos em string
+    window.localStorage.setItem(this.chave, JSON.stringify(this.baseDeContatos));   
   }
 }
