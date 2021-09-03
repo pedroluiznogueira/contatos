@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ListaDeContatosComponent } from './components/lista-de-contatos/lista-de-contatos.component';
 import { ContatoComponent } from './components/contato/contato.component';
+import { CreateContatoComponent } from './components/create-contato/create-contato.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ListaDeContatosComponent,
-    ContatoComponent
+    ContatoComponent,
+    CreateContatoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

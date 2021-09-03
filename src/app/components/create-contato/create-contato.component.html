@@ -1,0 +1,38 @@
+<div id="modal">
+    <form>
+        <label>
+            Nome:
+            <input type="text" name="nome" id="nome" [(ngModel)]="novoContato.nome">
+        </label>
+        <label>
+            E-mail:
+            <input type="email" name="email" id="email" [(ngModel)]="novoContato.email">
+        </label>
+        <label>
+            Telefone:
+            <div *ngFor="let t of novoContato.telefone; let i = index; trackBy: track">
+                <!-- relacionar o name com o {{i}} faz com que cada iteração pegue o elemento certo no array -->
+                <input type="tel" name="telefone{{i}}" [(ngModel)]="novoContato.telefone[i]">
+                <a *ngIf="i == 0"><i class="material-icons">add_circle</i></a>
+                <a *ngIf="i != 0" class="remove"><i class="material-icons">remove_circle</i></a>
+
+                <!-- <ng-template #bolinhaVermelha>
+                    <a class="remove"><i class="material-icons">remove_circle</i></a>
+                </ng-template> -->
+            </div>
+            <!-- <div>
+                <input type="email" name="email" id="email">
+                <a class="remove" ><i class="material-icons">remove_circle</i></a>
+            </div>
+            <div>
+                <input type="email" name="email" id="email">
+                <a class="remove" ><i class="material-icons">remove_circle</i></a>
+            </div> -->
+            <pre>{{novoContato | json}}</pre>
+        </label>
+        <div class="controles">
+            <button type="button" class="link" (click)="cancelar()">Cancelar</button>
+            <button type="button">Adicionar</button>
+        </div>
+    </form>
+</div>

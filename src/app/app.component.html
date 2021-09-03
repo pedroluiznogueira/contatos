@@ -1,2 +1,7 @@
-<app-menu></app-menu>
+<!-- o ngIf em falso faz o componente sumir, em true faz aparecer, o padrão seria o true aqui no html -->
+<!-- referindo à uma variável funciona do mesmo jeito -->
+<!-- para escutar o aviso que foi emitido fazemos -- ATENÇÃO NOS PARENTESES -- (emissor)="funcao()" -->
+<!-- no app-menu, mas essa funcao que o emissor ao escutar executa-a escuta tem de exister no app ts -->
+<app-menu (onAddContatoClick)="mostrarModal()"></app-menu>
 <app-lista-de-contatos></app-lista-de-contatos>
+<app-create-contato *ngIf="mostrandoModal" (onCancelarClick)="esconderModal()"></app-create-contato>
