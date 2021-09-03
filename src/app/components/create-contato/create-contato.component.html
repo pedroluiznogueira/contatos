@@ -10,29 +10,24 @@
         </label>
         <label>
             Telefone:
-            <div *ngFor="let t of novoContato.telefone; let i = index; trackBy: track">
-                <!-- relacionar o name com o {{i}} faz com que cada iteração pegue o elemento certo no array -->
-                <input type="tel" name="telefone{{i}}" [(ngModel)]="novoContato.telefone[i]">
-                <a *ngIf="i == 0" (click)="addTelefone()"><i class="material-icons">add_circle</i></a>
-                <a *ngIf="i != 0" class="remove" (click)="removerTelefone(i)"><i class="material-icons">remove_circle</i></a>
+            <div *ngFor="let tel of novoContato.telefones; let i = index; trackBy: track;">
 
-                <!-- <ng-template #bolinhaVermelha>
-                    <a class="remove"><i class="material-icons">remove_circle</i></a>
-                </ng-template> -->
+                <input type="tel" name="telefone_{{i}}" [(ngModel)]="novoContato.telefones[i]">
+                
+                <a *ngIf="i==0" (click)="addTelefone()">
+                    <i class="material-icons">add_circle</i>
+                </a>
+
+                <a *ngIf="i!=0" (click)="removeTelefone(i)" class="remove">
+                    <i class="material-icons">remove_circle</i>
+                </a>
+                
             </div>
-            <!-- <div>
-                <input type="email" name="email" id="email">
-                <a class="remove" ><i class="material-icons">remove_circle</i></a>
-            </div>
-            <div>
-                <input type="email" name="email" id="email">
-                <a class="remove" ><i class="material-icons">remove_circle</i></a>
-            </div> -->
-            <pre>{{novoContato | json}}</pre>
+            
         </label>
         <div class="controles">
-            <button type="button" class="link" (click)="cancelar()">Cancelar</button>
-            <button type="button" (click)="salvar()">Adicionar</button>
+            <button (click)="cancelar()" type="button" class="link">Cancelar</button>
+            <button (click)="salvar()" type="button">Adicionar</button>
         </div>
     </form>
 </div>

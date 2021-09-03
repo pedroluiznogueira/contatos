@@ -10,8 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: none; */
-    /* opacity: 0; */
     transition: opacity 3s linear;
 }
 

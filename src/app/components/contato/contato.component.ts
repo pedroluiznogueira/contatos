@@ -8,8 +8,7 @@ import { Contato } from 'src/app/models/Contato';
 })
 export class ContatoComponent implements OnInit {
 
-  // importa a função input, para poder levar dados para essa variavel, decorador "@Input()"
-  @Input("a") registro!: Contato;
+  @Input() registro!:Contato;
 
   constructor() { }
 

@@ -1,6 +1,5 @@
-// Criando interface para representar cada Contato
 export interface Contato {
-    nome: string;
-    email?: string;
-    telefone: string[];
+    nome:string;
+    email:string;
+    telefones:string[]
 }

@@ -14,7 +14,7 @@ body {
     background-color: #212121;
     color: #CCC;
     height: 100%;
-    background-image: url("assets/img/bg.jpg");
+    background-image: url(assets/img/bg.jpg);
     background-size:cover;
     background-attachment: fixed;
 }
@@ -50,7 +50,8 @@ input[type=tel]{
 
 input[type=text]:focus,
 input[type=email]:focus,
-input[type=password]:focus{
+input[type=password]:focus,
+input[type=tel]:focus{
     outline: none;
     border: 2px solid rgb(60, 0, 200);
     background-color: rgba(256,256,256,1);
