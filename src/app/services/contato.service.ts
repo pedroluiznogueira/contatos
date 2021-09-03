@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Contato } from '../models/Contato';
 
 @Injectable({
@@ -7,6 +7,10 @@ import { Contato } from '../models/Contato';
 export class ContatoService {
 
   private readonly chave: string = "CONTATOS";
+
+  // carregando um array de Contato em "[]", agora onContatoService é um objeto da classe ContatoService
+  // static faz com que um atributo de uma classe possa ser usado sem criarmos um objeto dessa classe
+  static onContatosMudaram: EventEmitter<Contato[]> = new EventEmitter();
 
   constructor() { }
 
@@ -35,5 +39,9 @@ export class ContatoService {
 
     // salvar o array de volta no local storage
     window.localStorage.setItem(this.chave, JSON.stringify(contatos));
+
+    // emitindo o evento que "contatos" mudaram
+    // agora não emitimos com o cs mas sim com ContatoService
+    ContatoService.onContatosMudaram.emit(contatos);
   }
 }

@@ -14,6 +14,14 @@ export class ListaDeContatosComponent implements OnInit {
 
   constructor() {
     this.contatos = this.cs.getContatos();
+    // subcribe recebe função que vai ser excutada sempre que o evento acontecer, a função dentro pega o que vem no evento
+    // agora não usamos mais cs mas sim ContatoService
+    ContatoService.onContatosMudaram.subscribe(
+      (contatos) => {
+        alert(contatos);
+        this.contatos = contatos;
+      }
+    )
   }
 
   ngOnInit(): void {
