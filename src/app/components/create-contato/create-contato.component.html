@@ -13,8 +13,8 @@
             <div *ngFor="let t of novoContato.telefone; let i = index; trackBy: track">
                 <!-- relacionar o name com o {{i}} faz com que cada iteração pegue o elemento certo no array -->
                 <input type="tel" name="telefone{{i}}" [(ngModel)]="novoContato.telefone[i]">
-                <a *ngIf="i == 0"><i class="material-icons">add_circle</i></a>
-                <a *ngIf="i != 0" class="remove"><i class="material-icons">remove_circle</i></a>
+                <a *ngIf="i == 0" (click)="addTelefone()"><i class="material-icons">add_circle</i></a>
+                <a *ngIf="i != 0" class="remove" (click)="removerTelefone(i)"><i class="material-icons">remove_circle</i></a>
 
                 <!-- <ng-template #bolinhaVermelha>
                     <a class="remove"><i class="material-icons">remove_circle</i></a>

@@ -9,13 +9,14 @@ import { Contato } from 'src/app/models/Contato';
 export class CreateContatoComponent implements OnInit {
 
   @Output() onCancelarClick:EventEmitter<null> = new EventEmitter;
+  // @ViewChild mexe no focus do cursor
   
   // two data biding com ngModel, cujo campo precisa de um atributo "name"
   novoContato: Contato = {
     // criando esses campos vazios
     nome: "",
     email: "",
-    telefone:["", "", ""]
+    telefone:[""]
   }
 
   ver!: boolean;
@@ -23,9 +24,6 @@ export class CreateContatoComponent implements OnInit {
   constructor() {
     
    }
-
-  ngOnInit(): void {
-  }
 
   cancelar() {
     console.log("saindo do Modal")
@@ -37,12 +35,14 @@ export class CreateContatoComponent implements OnInit {
     return index;
   }
 
-  addClassText(): void {
-    let a = document.querySelector("a")!;
-    a.classList.add("remove");
-
-    let icon = document.querySelector("i")!;
-    icon.innerText = "remove_circle";
+  ngOnInit(): void {
   }
 
+  addTelefone(): void {
+    this.novoContato.telefone.push("");
+  }
+
+  removerTelefone(pos: number):void {
+    this.novoContato.telefone.splice(pos, 1);    
+  }
 }
